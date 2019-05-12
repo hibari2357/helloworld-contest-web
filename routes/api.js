@@ -33,11 +33,31 @@ const getUsers = (cb) => {
   });
 };
 
+
+const getUserPerfs = (name, cb) => {
+  client.get('hubot:storage', (err, rep) => {
+    if (!rep) throw new Error(err);
+    const userobj = JSON.parse(rep)._private;
+    if (!userobj[name]) throw new Error('User not found');
+    const history = JSON.parse(userobj[name]).history;
+    console.log(history);
+    cb(history);
+  });
+};
+
 /* GET users listing. */
 router.get('/users', (req, res, next) => {
   getUsers((users) => {
     res.json(users);
   });
 });
+
+router.get('/users/:name', (req, res, next) => {
+  getUserPerfs(req.params.name, (perfs) => {
+    res.json(perfs);
+  });
+});
+
+
 
 module.exports = router;
