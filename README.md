@@ -6,3 +6,17 @@
 ### 機能[WIP]
 - ユーザー一覧のランキングが見れる
 - 自分の過去のレーティング推移が見れる
+
+
+## トップページ
+個人の過去のパフォーマンスを取得  
+　　
+
+<img src="https://raw.githubusercontent.com/hibari2357/helloworld-contest-web/image/top.png" width="30%">
+　　
+
+## ユーザー一覧ページ
+全ユーザーのランキングを確認できる
+　　
+
+<img src="https://raw.githubusercontent.com/hibari2357/helloworld-contest-web/image/users.png" width="30%">
