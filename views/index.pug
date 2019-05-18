@@ -4,14 +4,19 @@ block content
   h1 起床 Beginners Contest
   p 起床 Begginer Contestに参加しているユーザーのパフォーマンスを確認できます。
   
-  #performance-graph-wrapper
+  #performance-wrapper
     p 確認したいユーザーの名前
     input(v-model='username')
-    button(v-on:click='getUserPerfs') 取得
-    
+    button(v-on:click='showChart') グラフ取得
+    p {{ errorMessage }}    
     ul.performance-list
-      li(v-for='perf in perfs')
-        | {{ perf }}
+    //- li(v-for='perf in perfs')
+    //-     | {{ perf }}
+    
+    .chart-wrapper
+      canvas#perfs-chart
+
+
 
 
   p

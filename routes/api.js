@@ -36,9 +36,10 @@ const getUsers = (cb) => {
 
 const getUserPerfs = (name, cb) => {
   client.get('hubot:storage', (err, rep) => {
-    if (!rep) throw new Error(err);
     const userobj = JSON.parse(rep)._private;
-    if (!userobj[name]) throw new Error('User not found');
+    if (!userobj[name]) {
+      return cb();
+    }
     const history = JSON.parse(userobj[name]).history;
     console.log(history);
     cb(history);
