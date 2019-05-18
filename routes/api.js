@@ -3,12 +3,6 @@ const router = new express.Router();
 const redis = require('redis');
 const client = redis.createClient();
 
-class User {
-  constructor(name, rating) {
-    this.name = name;
-    this.rating = rating;
-  }
-}
 
 client.on('error', (err) => {
   console.log('Error' + err);
