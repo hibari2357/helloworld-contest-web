@@ -1,6 +1,7 @@
 const redis = require('redis');
 const client = redis.createClient();
 
+
 client.on('error', (err) => {
   console.log('Error' + err);
 });
@@ -21,6 +22,8 @@ const mockHistory = [
   {'date':'2019-02-26T01:42:28.844Z','performance':598.2744768905403,'newRating':2370.859140702226}
 ];
 
+const mockHistoryLong = require('./data');
+
 
 client.get('hubot:storage', (err, rep) => {
   const data = JSON.parse(rep);
@@ -28,7 +31,7 @@ client.get('hubot:storage', (err, rep) => {
 
   const mock = {
     name: 'mock',
-    history: mockHistory,
+    history: mockHistoryLong,
   };
   _private.mock = JSON.stringify(mock);
 

@@ -20,7 +20,7 @@ const getUsers = (cb) => {
       const history = JSON.parse(user).history;
       const lastRating = Math.round(history[history.length-1].newRating);
       const nameDisplayed = name.substr(0, 2) + '*'.repeat(name.length - 2);
-      users.push(new User(nameDisplayed, lastRating));
+      users.push({nameDisplayed, lastRating});
     }
     console.log(users);
     cb(users);

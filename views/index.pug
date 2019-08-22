@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h1 起床 Beginners Contest
-  p 起床 Begginer Contestに参加しているユーザーのパフォーマンスを確認できます。
+  h1 Kisyo Beginners Contest
+  p 参加ユーザーのパフォーマンスを確認できます。
   
   #performance-wrapper
-    p 確認したいユーザーの名前
+    p ユーザー名
     input(v-model='username')
     button(v-on:click='showChart') グラフ取得
     p {{ errorMessage }}    
