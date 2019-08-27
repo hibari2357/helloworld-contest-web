@@ -5,7 +5,7 @@ const app = new Vue({
   },
   mounted() {
     axios
-      .get('http://localhost:3000/api/users')
+      .get('/api/users')
       .then((res) => {
         this.users = res.data;
     });
