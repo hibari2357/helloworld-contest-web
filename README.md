@@ -2,8 +2,12 @@
   
 <a href="https://github.com/hibari2357/rating-hello-world-bot"> 起床レーティングslackbot </a>が集めたデータを閲覧できるウェブサービス  
 
+### URL
+Kisyo Beginners Contest  
+https://kisyo-contest-web.herokuapp.com/
 
-### 機能[WIP]
+
+### 機能
 - ユーザー一覧のランキングが見れる
 - 自分の過去のレーティング推移が見れる
 
