@@ -2,4 +2,3 @@ node_modules
 .DS_Store*
 .eslintrc.js
 *.rdb
-util/data.js
