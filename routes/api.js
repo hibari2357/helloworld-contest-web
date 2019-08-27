@@ -1,7 +1,9 @@
 const express = require('express');
 const router = new express.Router();
 const redis = require('redis');
-const client = redis.createClient();
+
+const redisUrl = process.env.REDISCLOUD_URL | '';
+const client = redis.createClient(redisUrl, {no_ready_check: true});
 
 
 client.on('error', (err) => {
