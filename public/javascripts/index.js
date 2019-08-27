@@ -8,7 +8,7 @@ const app = new Vue({
   methods: {
     getUserPerfs(cb) {
       axios
-          .get(`http://localhost:3000/api/users/${this.username}`)
+          .get(`/api/users/${this.username}`)
           .then((res) => {
             this.perfs = res.data;
             cb(this.perfs);
