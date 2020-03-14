@@ -17,7 +17,7 @@
     "redis": "^2.8.0"
   },
   "devDependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.12.0",
